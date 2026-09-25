@@ -1,0 +1,325 @@
+.aboutSection {
+  position: relative;
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: stretch;
+  margin-bottom: 50px;
+}
+
+/* Architecture Visual Card */
+.visualCard {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 24px;
+  background: rgba(13, 19, 36, 0.7);
+}
+
+.visualCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.architectureBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.cyanIcon {
+  color: var(--accent-cyan);
+}
+
+.networkStatus {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #10b981;
+}
+
+/* Interactive Node Diagram */
+.nodeDiagram {
+  position: relative;
+  height: 220px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 20px;
+}
+
+.nodeNetworkSvg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.nodeBtn {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  z-index: 2;
+}
+
+.nodeBtn:hover {
+  background: rgba(30, 41, 59, 0.95);
+  border-color: rgba(56, 189, 248, 0.5);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.nodeBtnActive {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: #38bdf8;
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.35);
+}
+
+.nodeIngest {
+  top: 15px;
+  left: 35%;
+}
+
+.nodeVector {
+  bottom: 15px;
+  left: 35%;
+}
+
+.nodeSecurity {
+  left: 20px;
+  top: 35%;
+}
+
+.nodeOutput {
+  right: 20px;
+  top: 35%;
+  background: rgba(30, 41, 59, 0.6);
+}
+
+/* Node Inspector Bar */
+.nodeInspector {
+  background: rgba(10, 15, 30, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 14px 18px;
+}
+
+.inspectorHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.inspectorTitle {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.inspectorMetric {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent-cyan);
+  background: rgba(56, 189, 248, 0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.inspectorDesc {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Right Narrative Glass */
+.aboutNarrative {
+  display: flex;
+  flex-direction: column;
+}
+
+.narrativeGlass {
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 36px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.narrativeTitle {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.narrativeParagraph {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.narrativePoints {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 16px 0 24px 0;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.narrativePoint {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.checkIcon {
+  color: var(--accent-cyan);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.narrativePoint strong {
+  font-size: 0.9rem;
+  color: #e2e8f0;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.narrativePoint p {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.narrativeCtaRow {
+  padding-top: 12px;
+}
+
+/* 3 Feature Cards Grid */
+.featureCardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.featureCard {
+  padding: 30px 26px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.featureCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.featureIconBox {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+}
+
+.featureTag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+.featureTitle {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.featureDesc {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.featureBottomAccent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .aboutGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .featureCardsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .narrativeGlass {
+    padding: 24px;
+  }
+
+  .visualCard {
+    padding: 20px;
+  }
+
+  .nodeDiagram {
+    height: 180px;
+  }
+
+  .nodeBtn {
+    padding: 8px 12px;
+    font-size: 0.72rem;
+  }
+}

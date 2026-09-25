@@ -1,0 +1,139 @@
+.whySection {
+  position: relative;
+}
+
+.whyGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 48px;
+}
+
+.whyCard {
+  padding: 32px 28px;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background: rgba(13, 19, 36, 0.65);
+}
+
+.cardTopRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.iconBox {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  transition: transform 0.3s ease;
+}
+
+.whyCard:hover .iconBox {
+  transform: scale(1.1) rotate(4deg);
+}
+
+.metricBadge {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.metricNumber {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.metricLabelText {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: #94a3b8;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.cardTitle {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.cardDesc {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.cardHoverAccent {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.whyCard:hover .cardHoverAccent {
+  opacity: 1;
+}
+
+/* Bottom Banner */
+.whyBanner {
+  padding: 32px 40px;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.7) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(56, 189, 248, 0.1);
+}
+
+.bannerHeading {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.bannerSubtext {
+  font-size: 0.92rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .whyGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .whyBanner {
+    flex-direction: column;
+    text-align: center;
+    padding: 28px;
+  }
+}
+
+@media (max-width: 680px) {
+  .whyGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .whyCard {
+    padding: 24px 20px;
+  }
+}

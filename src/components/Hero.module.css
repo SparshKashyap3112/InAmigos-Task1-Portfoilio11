@@ -1,0 +1,522 @@
+.heroSection {
+  padding-top: 150px;
+  padding-bottom: 90px;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* Left Hero Content */
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 2;
+}
+
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  box-shadow: 0 4px 20px rgba(56, 189, 248, 0.15);
+  margin-bottom: 24px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.badgePulseIcon {
+  color: var(--accent-cyan);
+  display: flex;
+  align-items: center;
+  animation: floatSlow 3s ease-in-out infinite;
+}
+
+.badgeText {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.badgePill {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: #0369a1;
+  background: #38bdf8;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.heroTitle {
+  font-size: clamp(2.6rem, 5.2vw, 4.1rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.12;
+  margin-bottom: 22px;
+  color: #ffffff;
+}
+
+.heroTitleHighlight {
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+}
+
+.heroDescription {
+  font-size: 1.15rem;
+  color: #94a3b8;
+  line-height: 1.7;
+  max-width: 540px;
+  margin-bottom: 36px;
+}
+
+.heroButtons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.heroHighlights {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  width: 100%;
+}
+
+.highlightItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #cbd5e1;
+}
+
+.highlightIcon {
+  color: var(--accent-cyan);
+}
+
+/* Right Hero Visual Area */
+.heroVisualWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visualGlow {
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(circle at 60% 40%, rgba(56, 189, 248, 0.18) 0%, rgba(139, 92, 246, 0.14) 40%, transparent 70%);
+  border-radius: 40px;
+  filter: blur(40px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Main Dashboard Glass Card */
+.heroDashboard {
+  width: 100%;
+  max-width: 520px;
+  background: rgba(13, 19, 36, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.7), 0 0 40px rgba(56, 189, 248, 0.1);
+  padding: 22px;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+.heroDashboard:hover {
+  border-color: rgba(56, 189, 248, 0.35);
+  box-shadow: 0 35px 70px -15px rgba(0, 0, 0, 0.8), 0 0 50px rgba(56, 189, 248, 0.2);
+}
+
+.dashHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 16px;
+}
+
+.dashWindowControls {
+  display: flex;
+  gap: 6px;
+}
+
+.dotRed, .dotYellow, .dotGreen {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+.dotRed { background: #ef4444; }
+.dotYellow { background: #f59e0b; }
+.dotGreen { background: #10b981; }
+
+.dashTitle {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #64748b;
+  letter-spacing: 0.02em;
+}
+
+.dashLiveBeacon {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #10b981;
+}
+
+/* Metrics Row */
+.dashMetricsRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.miniMetricCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.miniMetricLabel {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.miniMetricValue {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.miniMetricUnit {
+  font-size: 0.7rem;
+  color: var(--accent-cyan);
+}
+
+.sparkline {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 22px;
+  padding-top: 4px;
+}
+
+.sparkBar {
+  flex: 1;
+  background: linear-gradient(to top, rgba(56, 189, 248, 0.3), #38bdf8);
+  border-radius: 2px;
+  transition: height 0.3s ease;
+}
+
+.progressBarWrapper {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.progressBarFill {
+  height: 100%;
+  background: linear-gradient(90deg, #38bdf8, #10b981);
+  border-radius: 3px;
+}
+
+/* Workflow Display */
+.workflowDisplay {
+  background: rgba(10, 15, 30, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 14px;
+}
+
+.workflowHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.workflowTitle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+.cyanIcon {
+  color: var(--accent-cyan);
+}
+
+.runSimBtn {
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  color: var(--accent-cyan);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s ease;
+}
+
+.runSimBtn:hover {
+  background: rgba(56, 189, 248, 0.2);
+  border-color: rgba(56, 189, 248, 0.5);
+}
+
+.workflowList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.workflowItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.workflowItem:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.workflowItemActive {
+  background: rgba(56, 189, 248, 0.08);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.wfMeta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wfIndex {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #64748b;
+}
+
+.wfName {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #e2e8f0;
+}
+
+.wfStats {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wfTime {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #94a3b8;
+}
+
+.wfTag {
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.tagGreen {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.tagCyan {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.tagPurple {
+  background: rgba(168, 85, 247, 0.15);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.dashFooter {
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.terminalPrompt {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #94a3b8;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.promptSymbol {
+  color: var(--accent-cyan);
+  font-weight: 700;
+}
+
+/* Floating Glass Badges around Dashboard */
+.floatingGlassBadge {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  border-radius: 14px;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(56, 189, 248, 0.15);
+  z-index: 3;
+  pointer-events: none;
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+.badgeIconBox {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badgeInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.badgeLabel {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.badgeVal {
+  font-size: 0.65rem;
+  color: #94a3b8;
+}
+
+/* Floating element positions */
+.floatBadgeAI {
+  top: -24px;
+  left: -20px;
+  animation-delay: 0s;
+}
+
+.floatBadgeAutomation {
+  top: 15%;
+  right: -30px;
+  animation-delay: 1.5s;
+}
+
+.floatBadgeAnalytics {
+  bottom: 25%;
+  left: -35px;
+  animation-delay: 3s;
+}
+
+.floatBadgeCloud {
+  bottom: -20px;
+  right: -10px;
+  animation-delay: 2.2s;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .heroContent {
+    align-items: center;
+    text-align: center;
+  }
+
+  .heroDescription {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .heroButtons {
+    justify-content: center;
+  }
+
+  .heroHighlights {
+    justify-content: center;
+  }
+
+  .floatingGlassBadge {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroSection {
+    padding-top: 120px;
+  }
+
+  .dashMetricsRow {
+    grid-template-columns: 1fr;
+  }
+}

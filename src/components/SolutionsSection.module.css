@@ -1,0 +1,331 @@
+.solutionsSection {
+  position: relative;
+}
+
+/* Stepper Bar */
+.timelineStepper {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timelineProgressBar {
+  position: absolute;
+  top: 32px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.08);
+  z-index: 1;
+}
+
+.timelineProgressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #38bdf8, #818cf8, #10b981);
+  transition: width 0.4s ease;
+}
+
+.stepButtonsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.stepNavBtn {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: left;
+}
+
+.stepNavBtn:hover {
+  background: rgba(30, 41, 59, 0.85);
+  border-color: rgba(56, 189, 248, 0.4);
+  transform: translateY(-2px);
+}
+
+.stepNavIconBox {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.stepNavMeta {
+  display: flex;
+  flex-direction: column;
+}
+
+.stepNavNumber {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 0.08em;
+}
+
+.stepNavTitle {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #cbd5e1;
+}
+
+/* Active State */
+.stepActive {
+  background: rgba(30, 41, 59, 0.9);
+  border-color: #38bdf8;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 25px rgba(56, 189, 248, 0.25);
+}
+
+.stepActive .stepNavIconBox {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: #38bdf8;
+  color: #38bdf8;
+}
+
+.stepActive .stepNavNumber {
+  color: var(--accent-cyan);
+}
+
+.stepActive .stepNavTitle {
+  color: #ffffff;
+}
+
+.stepPassed .stepNavIconBox {
+  color: #10b981;
+}
+
+/* Active Step Card */
+.activeStepCard {
+  background: rgba(13, 19, 36, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  padding: 36px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.stepCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 28px;
+}
+
+.stepNumberBadge {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(129, 140, 248, 0.2));
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
+}
+
+.stepTitleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stepMainTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.stepSubtitle {
+  font-size: 1rem;
+  color: var(--accent-cyan);
+  margin: 0;
+}
+
+/* Card Body */
+.stepCardBody {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 36px;
+  margin-bottom: 28px;
+}
+
+.stepSummaryText {
+  font-size: 1.05rem;
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.stepKeyPoints {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stepPointItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.92rem;
+  color: #e2e8f0;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.checkIcon {
+  color: #10b981;
+  flex-shrink: 0;
+}
+
+/* Deliverable Card */
+.deliverableCard {
+  background: rgba(10, 15, 30, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.deliverableTag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: #94a3b8;
+  letter-spacing: 0.08em;
+}
+
+.deliverableName {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+.deliverableMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.metaRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+}
+
+.metaKey {
+  color: #94a3b8;
+}
+
+.metaVal {
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+/* Stepper Controls Footer */
+.stepControlsFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.controlNavBtn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.controlNavBtn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+.controlNavBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.stepperDots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dotActive {
+  background: var(--accent-cyan);
+  width: 24px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px var(--accent-cyan);
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .timelineProgressBar {
+    display: none;
+  }
+
+  .stepButtonsRow {
+    grid-template-columns: 1fr;
+  }
+
+  .stepCardBody {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .activeStepCard {
+    padding: 20px;
+  }
+
+  .stepCardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
