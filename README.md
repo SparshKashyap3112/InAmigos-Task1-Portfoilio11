@@ -25,7 +25,29 @@ A modern, responsive, and glassmorphic website for **NexaAI**, an AI-powered ent
 
 ---
 
-## 🚀 Getting Started
+## 🌐 Deploying to Render (Recommended)
+
+This repository is **Render-Ready** with `render.yaml` blueprint configuration and `_redirects` for SPA routing.
+
+### Option A: Automatic Blueprint Deploy (Fastest)
+1. Log in to [Render Dashboard](https://dashboard.render.com/).
+2. Click **New +** → **Blueprint**.
+3. Connect your repository: `https://github.com/SparshKashyap3112/InAmigos-Task1-Portfoilio11`.
+4. Click **Apply** — Render will automatically read `render.yaml` and deploy the static site!
+
+### Option B: Manual Static Site Deploy
+1. On Render Dashboard, click **New +** → **Static Site**.
+2. Connect your GitHub repository.
+3. Configure the following build settings:
+   - **Name:** `nexa-ai-website`
+   - **Branch:** `main`
+   - **Build Command:** `npm run build`
+   - **Publish Directory:** `dist`
+4. Click **Create Static Site**.
+
+---
+
+## 🚀 Local Development
 
 ### 1. Clone Repository
 ```bash
@@ -48,7 +70,6 @@ Open `http://localhost:3000/` in your browser.
 ```bash
 npm run build
 ```
-The optimized bundle will be in the `dist/` directory.
 
 ---
 
